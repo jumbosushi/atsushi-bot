@@ -5,7 +5,7 @@ get '/' do
 end
 
 post '/' do
-  puts request.text
+  puts request.to_s
   puts params
   status 200
   'This message is returned'
