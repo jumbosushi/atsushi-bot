@@ -1,3 +1,4 @@
+#!/usr/bin/ruby
 require 'sinatra'
 
 get '/' do
@@ -5,11 +6,11 @@ get '/' do
 end
 
 def get_text(msg)
-    {
-      "response_type": "in_channel",
-      "text": msg,
-      "attachments": []
-    }
+    JSON.generate({
+      response_type: "in_channel",
+      text: msg,
+      attachments: []
+    })
 end
 
 post '/' do
