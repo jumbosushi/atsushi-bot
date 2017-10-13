@@ -7,9 +7,7 @@ end
 
 def get_text(msg)
     {
-      response_type: "in_channel",
       text: msg,
-      attachments: []
     }
 end
 
