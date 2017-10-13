@@ -9,7 +9,7 @@ post '/' do
 
   case text
   when 'ls'
-    puts 'Work:
+    'Work:
     Web Develper @ Ubysser (Oct 2017 ~ Present)
     Student Developer Intern @ BlackBerry (Jan 2017 - Aug 2017)
     Software Engineering Intern @ Prynt (Jul 2016 - Dec 2016)
