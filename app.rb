@@ -6,11 +6,11 @@ get '/' do
 end
 
 def get_text(msg)
-    JSON.generate({
+    {
       response_type: "in_channel",
       text: msg,
       attachments: []
-    })
+    }
 end
 
 post '/' do
