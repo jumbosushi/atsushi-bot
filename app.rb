@@ -6,9 +6,9 @@ get '/' do
 end
 
 def get_text(msg)
-    {
-      text: msg,
-    }
+    JSON.generate({
+      text: msg
+    })
 end
 
 post '/' do
