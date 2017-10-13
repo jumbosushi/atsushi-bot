@@ -1,7 +1,15 @@
 require 'sinatra'
 
 get '/' do
-  'Hello world!'
+  'This is api for atsushi-bot. Try adding it as an endpoint for slack slash command!'
+end
+
+def get_text(msg)
+    {
+      "response_type": "in_channel",
+      "text": msg,
+      "attachments": []
+    }
 end
 
 post '/' do
@@ -9,7 +17,7 @@ post '/' do
 
   case text
   when 'ls'
-    'Work:
+    get_text('Work:
     Web Develper @ Ubysser (Oct 2017 ~ Present)
     Student Developer Intern @ BlackBerry (Jan 2017 - Aug 2017)
     Software Engineering Intern @ Prynt (Jul 2016 - Dec 2016)
@@ -20,12 +28,12 @@ post '/' do
     OttawaJS
 
     School:
-    University of British Columbia'
+    University of British Columbia')
   when 'jokes'
-    "Why did chicken cross the road?"
+    get_text("Why did chicken cross the road?")
   when 'ping'
-    "Hi!"
+    get_text("Hi!")
   when 'origin'
-    "I'm originally from Kyoto, Japan. Grew 6 years in U.S, and now studies in Vancouver, Canada :flag-ca:"
+    get_text("I'm originally from Kyoto, Japan. Grew 6 years in U.S, and now studies in Vancouver, Canada :flag-ca:")
   end
 end
