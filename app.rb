@@ -5,5 +5,8 @@ get '/' do
 end
 
 post '/' do
-  'This message is returned', 200
+  puts request
+  puts params
+  status 200
+  'This message is returned'
 end
